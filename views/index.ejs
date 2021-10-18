@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { color: <%= color  %>; }
+    </style>
+</head>
+<body>
+    <h1>Pizza Order Form</h1>
+
+    <form class="order-form" action="/orders" method="POST">
+        <!-- TODO: create pizza order form -->
+        <label for="">
+            Delivery Date (yyyy-mm-dd)
+            <input type="text" name="date" />
+        </label>
+        <fieldset>
+            <legend>Size</legend>
+                
+                <label for="extra-large">Extra-large
+                    <input type="radio" id="extra-large" name="size" value="Extra-large">
+                </label>                
+                <label for="large">Large
+                    <input type="radio" id="large" name="size" value="Large">
+                </label>                
+                <label for="medium">Medium
+                    <input type="radio" id="medium" name="size" value="Medium">
+                </label>                
+                <label for="small">Small
+                    <input type="radio" id="small" name="size" value="Small">
+                </label>
+        </fieldset>
+        <label>
+            Gluten free crust?
+            <input type="checkbox" name="Gluten_free" id="Gluten_free" value="true">
+        </label>
+        <fieldset>
+            <legend>Toppings (select between 2 and 4)</legend>
+            <label>
+                Tomato Sauce
+                <input type="checkbox" name="toppings[0]" id="sauce" value="Tomato Sauce">
+            </label>
+            <label>
+                Cheese
+                <input type="checkbox" name="toppings[1]" id="cheese" value="Cheese">
+            </label>
+            <label>
+                Pepperoni
+                <input type="checkbox" name="toppings[2]" id="pepperoni" value="Pepperoni">
+            </label>
+            <label>
+                Green peppers
+                <input type="checkbox" name="toppings[3]" id="greenPeppers" value="Green peppers">
+            </label>
+            <label>
+                Mushrooms
+                <input type="checkbox" name="toppings[4]" id="mushrooms" value="Mushrooms">
+            </label>
+            <label>
+                Olives
+                <input type="checkbox" name="toppings[5]" id="olives" value="Olives">
+            </label>
+        </fieldset>
+        <label for="">
+            Your name: 
+            <input type="text" name="name">
+        </label>
+        <label for="">
+            Your email: 
+            <input type="text" name="mail">
+        </label>
+        <label for="">
+            Customer loyalty rewards Id:
+            <input type="text" name='rewards'>
+        </label>
+        <button type="submit">Submit!</button>
+        <button type="reset">Reset</button>
+    </form>
+   
+
+    <form class="color-form" action="/" action="GET">
+       <!-- TODO: create page color form -->
+       <label>
+           Color of page:
+           <input type="text" name="color" />
+           <button type="submit">Submit color</button>
+       </label>
+    </form>
+
+</body>
+</html>
